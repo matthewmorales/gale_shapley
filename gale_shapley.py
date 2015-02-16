@@ -16,12 +16,13 @@ for x in range(0, len(lines)/2):
 for x in range(len(lines)/2, len(lines)):
 	girlLikes.append(rankLists[x])
 
-print "\n boys like list \n"
-print boyLikes
+print "\nBOYS AND THEIR PREFERENCES: \n"
+for index, item in enumerate(boyLikes):
+        print("Boy (%s): %s" % (index, item))
 
-print "\n girls like list \n"
-print girlLikes
-
+print "\nGIRLS AND THEIR PREFERENCES \n"
+for index, item in enumerate(girlLikes):
+        print("Girl (%s): %s" % (index, item))
 
 
 def gale_shapley():
@@ -51,7 +52,7 @@ def gale_shapley():
 					#there are still girls on his list
 					bachelorBoys.append(oldBoy)
 			else:
-				#stays with oldBoy
+				#stays with old boyfriend
 				if boysPreference:
 					bachelorBoys.append(boy)
 	return girlTaken
