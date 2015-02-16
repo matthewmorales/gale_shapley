@@ -1,7 +1,9 @@
 # gale_shapley
 Python implementation of Gale Shapley (stable marriage) algorithm.
 
-A sample list file is included. It is a simple text file listing hypothetical rankings one 
+A sample list file generator is included. Run list_gen.py before running gale_shapley.py
+
+It creates a simple text file listing hypothetical rankings one 
 group of people associates with anotherr (to keep it simple, we'll say it's a list of boys' preferences for girls,
 and girls' preferences for boys).
 
