@@ -16,11 +16,11 @@ for x in range(0, len(lines)/2):
 for x in range(len(lines)/2, len(lines)):
 	girlLikes.append(rankLists[x])
 
-print "\nBOYS AND THEIR PREFERENCES: \n"
+print "\nBOYS AND THEIR PREFERENCES:\n"
 for index, item in enumerate(boyLikes):
         print("Boy (%s): %s" % (index, item))
 
-print "\nGIRLS AND THEIR PREFERENCES \n"
+print "\nGIRLS AND THEIR PREFERENCES:\n"
 for index, item in enumerate(girlLikes):
         print("Girl (%s): %s" % (index, item))
 
@@ -39,7 +39,7 @@ def gale_shapley():
 		if girlTaken[girl] < 1:
 			#girl is not taken.
 			girlTaken[girl] = boy
-			print("Boy %s and Girl %s are engaged" % (boy, girl))
+			print("Boy (%s) and Girl (%s) are engaged" % (boy, girl))
 		else:
 			#The girl he wants is taken
 			girlsPreference = girlLikes[girl]
@@ -47,9 +47,9 @@ def gale_shapley():
 				#girl likes new boy
 				oldBoy = girlTaken[girl]
 				girlTaken[girl] = boy
-				print("Girl %s dumped Boy %s for Boy %s" % (girl, oldBoy, boy))
+				print("Girl (%s) broke up with Boy (%s) for Boy (%s)" % (girl, oldBoy, boy))
 				if boyLikes[oldBoy]:
-					#there are still girls on his list
+					#there are still girls on his list, he needs to keep searching
 					bachelorBoys.append(oldBoy)
 			else:
 				#stays with old boyfriend
