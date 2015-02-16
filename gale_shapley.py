@@ -57,7 +57,7 @@ def gale_shapley():
 					bachelorBoys.append(boy)
 	return girlTaken
 
-print("\n Pairs: \n")
+print("\nPAIRS: \n")
 pairs = gale_shapley()
 
 for index, item in enumerate(pairs):
