@@ -17,7 +17,7 @@ def randomize():
 		rankList.append(newRank)
 
 def create():
-    print('Creating new text file') 
+    print('Generating list.txt') 
 
     name = 'list.txt'  # Name of text file coerced with +.txt
 
@@ -25,9 +25,10 @@ def create():
         file = open(name,'wb')   # Trying to create a new file or open one
         for x in range(0, 20):
 			file.write('<'.join(map(str, rankList[x]))+"\n")
-
+        file.close()
+        
     except:
-        print('Something went wrong! Can\'t tell what?')
+        print('File Creation Failed')
         sys.exit(0) # quit Python
 
 randomize()

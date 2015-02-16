@@ -23,7 +23,7 @@ for index, item in enumerate(boyLikes):
 print "\nGIRLS AND THEIR PREFERENCES:\n"
 for index, item in enumerate(girlLikes):
         print("Girl (%s): %s" % (index, item))
-
+print "\n"
 
 def gale_shapley():
 
@@ -57,8 +57,9 @@ def gale_shapley():
 					bachelorBoys.append(boy)
 	return girlTaken
 
-print("\nPAIRS: \n")
 pairs = gale_shapley()
+
+print("\nPAIRS: \n")
 
 for index, item in enumerate(pairs):
         print("Girl (%s) is engaged to Boy (%s)" % (index, item))
